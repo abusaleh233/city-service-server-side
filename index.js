@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
 })
 
 
-
+// mongodb-url
 const uri = "mongodb+srv://issue-db:nR6zPuXWC8v6EhHn@cluster0.1quotkl.mongodb.net/?appName=Cluster0";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
