@@ -5,14 +5,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 
-
-
-
 // millelWare
 app.use(cors());
 app.use(express.json());
 
-//Get
+//app.Get
 app.get('/',(req,res)=>{
     res.send('city-service-port')
 })
@@ -125,11 +122,6 @@ async function run() {
   }
 }
 run().catch(console.dir);
-
-
-
-
-
 
 
 
