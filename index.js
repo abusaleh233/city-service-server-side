@@ -46,14 +46,15 @@ async function run() {
             res.send(result);
         })
 
+        // all-issue-url
         app.get('/issues', async (req,res)=>{
             const cursor = issueCollection.find()
             const result = await cursor.toArray();
             res.send(result);
-
         })
 
-       app.get('/issues/:id',async(req,res) => {
+        // details-page-url
+        app.get('/issues/:id',async(req,res) => {
             const id = req.params.id;
             const query = {_id: new ObjectId(id)};
             const result = await issueCollection.findOne(query);
