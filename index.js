@@ -33,6 +33,8 @@ async function run() {
   try {
     
     await client.connect();
+    
+    // mongodb-collection
     const db = client.db('issue-db');
     const issueCollection = db.collection('issues');
     const contributionCollection = db.collection('contribution');
