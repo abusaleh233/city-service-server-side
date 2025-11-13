@@ -33,17 +33,17 @@ async function run() {
   try {
     
     await client.connect();
-    
-    // mongodb-collection
-    const db = client.db('issue-db');
-    const issueCollection = db.collection('issues');
-    const contributionCollection = db.collection('contribution');
 
+        // mongodb-collection
+        const db = client.db('issue-db');
+        const issueCollection = db.collection('issues');
+        const contributionCollection = db.collection('contribution');
+
+        // home-page-url
         app.get('/latest-issues', async (req,res)=>{
             const cursor = issueCollection.find().sort({date: 1 }).limit(6);
             const result = await cursor.toArray();
             res.send(result);
-
         })
 
         app.get('/issues', async (req,res)=>{
